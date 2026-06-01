@@ -2,6 +2,11 @@
   "env": {
     "NODE_ENV": "production"
   },
+  "functions": {
+    "server/index.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -9,7 +14,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/client/dist/index.html"
+      "destination": "/dist/index.html"
     }
   ]
 }
