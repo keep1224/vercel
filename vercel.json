@@ -2,17 +2,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "functions": {
-    "server/index.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "build": {
-    "root": "client",
-    "installCommand": "npm install",
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist"
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -22,5 +11,10 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "build": {
+    "root": "client",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist"
+  }
 }
